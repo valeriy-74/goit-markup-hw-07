@@ -1,0 +1,29 @@
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.contacts .item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts a {
+  color: var(--primary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts a:hover,
+.contacts a:focus {
+  color: var(--accent-text-color);
+}
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--white-text-color);
+  margin-right: 70px;
+}
+.mail-icon,
+.tel-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
