@@ -18,19 +18,18 @@
   align-items: center;
   justify-content: space-between;
 }
-.feature-list .title {
+.feature-list__title {
   margin-bottom: 10px;
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.15;
 }
-.feature-list .text {
+.feature-list__text {
   font-size: 14px;
   line-height: 1.7;
-  /* outline: 2px solid red; */
 }
-.feature-list .item {
+.feature-list__item {
   width: 270px;
   height: 101px;
 }

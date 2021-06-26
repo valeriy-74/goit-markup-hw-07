@@ -1,7 +1,7 @@
-.sect-direction {
-  padding-bottom: 94px;
+.direction {
+  padding-top: 94px;
 }
-.section .section-title {
+.section-title {
   text-align: center;
   margin-bottom: 50px;
   color: var(--secondary-text-color);
@@ -9,18 +9,16 @@
   font-size: 36px;
   line-height: 1.17;
 }
-.sect-direction {
-  padding-top: 94px;
-}
-.directions {
+
+.direction-list {
   display: flex;
   justify-content: space-between;
   padding-bottom: 0px;
 }
-.directions .item {
+.direction-list__item {
   position: relative;
 }
-.directions .text {
+.direction-list__text {
   position: absolute;
   display: flex;
   justify-content: center;

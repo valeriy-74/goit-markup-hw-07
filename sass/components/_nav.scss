@@ -1,10 +1,6 @@
 .nav {
   display: flex;
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-text-color);
-}
 .site-nav {
   display: flex;
   align-items: center;
@@ -12,13 +8,19 @@
 .nav-list {
   display: flex;
 }
-.site-nav .nav-link {
+.site-nav__nav-link {
   padding-bottom: 32px;
   padding-top: 32px;
   position: relative;
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
 }
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
+.site-nav__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 .site-nav .active {
   color: var(--accent-text-color);
