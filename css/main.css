@@ -58,8 +58,8 @@ ul {
   border-bottom: solid #ececec;
 }
 
-.header .logo,
-.header .nav-link {
+.header .nav__logo,
+.header .site-nav__nav-link {
   color: var(--secondary-text-color);
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -142,6 +142,7 @@ ul {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  color: black;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -307,7 +308,7 @@ ul {
   text-decoration: underline;
 }
 
-.btnClose {
+.modal__btnClose {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -322,13 +323,13 @@ ul {
   outline: none;
 }
 
-.btnClose:focus + .iconClose {
+.modal__btnClose:focus .modal__iconClose {
   fill: var(--accent-text-color);
   outline: none;
   cursor: pointer;
 }
 
-.iconClose {
+.modal__iconClose {
   position: absolute;
   outline: none;
 }
@@ -373,22 +374,22 @@ ul {
   margin-left: 8px;
 }
 
-.menu {
+.filters {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.menu__item:not(:last-child) {
+.filters__item:not(:last-child) {
   margin-right: 8px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu__item:hover, .menu__item:focus {
+.filters__item:hover, .filters__item:focus {
   box-shadow: 0px 9px 17px 1px rgba(0, 0, 0, 0.54);
 }
 
-.butt-filter {
+.filters__btn {
   padding: 6px 22px;
   border-color: transparent;
   border-radius: 3px;
@@ -401,45 +402,35 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.butt-filter:hover, .butt-filter:focus {
+.filters__btn:hover, .filters__btn:focus {
   background-color: var(--accent-text-color);
   color: #ffffff;
   box-shadow: 0px 9px 17px 1px rgba(0, 0, 0, 0.54);
 }
 
 .portfolio {
-  padding-top: 20px;
-  padding-left: 24px;
-  padding-bottom: 20px;
-  padding-right: 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-}
-
-.work {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.workList {
+.project {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
 }
 
-.workList__workLink {
+.project__Link {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.thumb {
+.project__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.text-over {
+.project__text-over {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -452,35 +443,46 @@ ul {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.workList__item-portfolio {
+.project__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.workList__workLink:hover .text-over,
-.workList__workLink:focus .text-over {
+.project__Link:hover .project__text-over,
+.project__Link:focus .project__text-over {
   box-shadow: 0px 9px 17px 1px rgba(0, 0, 0, 0.54);
   transform: translateY(0);
 }
 
-.workList__workLink:hover .portfolio,
-.workList__workLink:focus .portfolio {
+.project__Link:hover .project__box,
+.project__Link:focus .project__box {
   box-shadow: 0px 9px 17px 1px rgba(0, 0, 0, 0.54);
 }
 
-.workList__title {
+.project__title {
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
 }
 
-.workList__text {
+.project__text {
+  color: #757575;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+}
+
+.project__box {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 .feature {
@@ -625,21 +627,21 @@ ul {
   fill: currentColor;
 }
 
-.clients {
+.client {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.client-list {
+.client__list {
   display: flex;
   justify-content: space-between;
 }
 
-.clients .section-title {
+.client .section__title {
   margin-bottom: 50px;
 }
 
-.client-link {
+.client__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -651,12 +653,12 @@ ul {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-link:hover, .client-link:focus {
+.client__link:hover, .client__link:focus {
   border-color: var(--accent-text-color);
   color: var(--accent-text-color);
 }
 
-.clients-icon {
+.client__icon {
   fill: currentColor;
 }
 

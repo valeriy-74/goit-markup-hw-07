@@ -1,15 +1,15 @@
-.clients {
+.client {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.client-list {
+.client__list {
   display: flex;
   justify-content: space-between;
 }
-.clients .section-title {
+.client .section__title {
   margin-bottom: 50px;
 }
-.client-link {
+.client__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +27,6 @@
     color: var(--accent-text-color);
   }
 }
-.clients-icon {
+.client__icon {
   fill: currentColor;
 }
